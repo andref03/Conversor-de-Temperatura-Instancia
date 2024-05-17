@@ -13,15 +13,19 @@ public class Kelvin {
     public Kelvin() {
     }
 
-    public Kelvin(float tempKelvin) {
-        this.tempKelvin = tempKelvin;
+    public Kelvin(float tempKelvin) throws Exception {
+        setTempKelvin(tempKelvin);
     }
 
     public float getTempKelvin() {
         return tempKelvin;
     }
 
-    public void setTempKelvin(float tempKelvin) {
+    public void setTempKelvin(float tempKelvin) throws Exception {
+        if (tempKelvin < 0) {
+            throw new Exception(">>> Exceção em Kelvin: temperatura deve ser maior "
+                    + "ou igual ao zero absoluto (0 K).");
+        }
         this.tempKelvin = tempKelvin;
     }
 
@@ -33,13 +37,17 @@ public class Kelvin {
         return tempCelsius;
     }
 
-    public float converterKelvinParaCelsius() {
-        this.tempCelsius = this.tempKelvin - 273.15f;
+    public float converterKelvinParaCelsius() throws Exception {
+        this.tempCelsius = this.tempKelvin - 273f;
+//        if (this.tempCelsius < -273) {
+//            this.tempCelsius = 0f;
+//            throw new Exception(">>> Exceção: ");
+//        }
         return tempCelsius;
     }
 
     public float converterKelvinParaFahrenheit() {
-        this.tempFahrenheit = (9 * (this.tempKelvin - 273.15f)) / 5 + 32;
+        this.tempFahrenheit = (9 * (this.tempKelvin - 273f)) / 5 + 32;
         return tempFahrenheit;
     }
 

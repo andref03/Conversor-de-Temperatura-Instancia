@@ -13,15 +13,19 @@ public class Fahrenheit {
     public Fahrenheit() {
     }
 
-    public Fahrenheit(float tempFahrenheit) {
-        this.tempFahrenheit = tempFahrenheit;
+    public Fahrenheit(float tempFahrenheit) throws Exception {
+        setTempFahrenheit(tempFahrenheit);
     }
 
     public float getTempFahrenheit() {
         return tempFahrenheit;
     }
 
-    public void setTempFahrenheit(float tempFahrenheit) {
+    public void setTempFahrenheit(float tempFahrenheit) throws Exception {
+        if (tempFahrenheit < -459) {
+            throw new Exception(">>> Exceção em Fahrenheit: a temperatura deve ser maior "
+                    + "ou igual a -459 ºF.");
+        }
         this.tempFahrenheit = tempFahrenheit;
     }
 
@@ -34,7 +38,7 @@ public class Fahrenheit {
     }
 
     public float converterFahrenheitParaKelvin() {
-        this.tempKelvin = (5 * (this.tempFahrenheit - 32)) / 9 + 273.15f;
+        this.tempKelvin = (5 * (this.tempFahrenheit - 32)) / 9 + 273f;
         return tempKelvin;
     }
 
