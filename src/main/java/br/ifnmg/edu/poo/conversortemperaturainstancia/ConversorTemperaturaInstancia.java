@@ -10,9 +10,11 @@ public class ConversorTemperaturaInstancia {
 
         try {
             Kelvin k1 = new Kelvin(176.35f);
-//            Celsius c1 = new Celsius(-277.85f);  // gera um Exception
+//            Kelvin k1 = new Kelvin(-2.5f);        // gera um Exception
             Celsius c1 = new Celsius(24.85f);
+//            Celsius c1 = new Celsius(-277.85f);   // gera um Exception
             Fahrenheit f1 = new Fahrenheit(451f);
+//            Fahrenheit f1 = new Fahrenheit(-470f);  // gera um Exception
 
             System.out.println(f1);
             System.out.println(">> De Fahrenheit para Kelvin: " 
