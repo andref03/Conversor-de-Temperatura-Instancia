@@ -39,10 +39,6 @@ public class Kelvin {
 
     public float converterKelvinParaCelsius() throws Exception {
         this.tempCelsius = this.tempKelvin - 273f;
-//        if (this.tempCelsius < -273) {
-//            this.tempCelsius = 0f;
-//            throw new Exception(">>> Exceção: ");
-//        }
         return tempCelsius;
     }
 
