@@ -24,7 +24,7 @@ public class Celsius {
     public void setTempCelsius(float tempCelsius) throws Exception {
         if (tempCelsius < -273) {
             throw new Exception(">>> Exceção em Celsius: a temperatura deve ser maior "
-                    + "ou igual a 273 ºC.");
+                    + "ou igual a -273 ºC.");
         }
         this.tempCelsius = tempCelsius;
     }
