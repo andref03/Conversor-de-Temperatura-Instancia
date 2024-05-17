@@ -23,8 +23,8 @@ public class Fahrenheit {
 
     public void setTempFahrenheit(float tempFahrenheit) throws Exception {
         if (tempFahrenheit < -459) {
-            throw new Exception(">>> Exceção em Fahrenheit: a temperatura deve ser maior "
-                    + "ou igual a -459 ºF.");
+            throw new Exception(">>> Exception em Fahrenheit: a temperatura deve ser maior "
+                    + "ou igual a -459 ºF.\n\t>> Valor registrado: " + tempFahrenheit + " ºF.");
         }
         this.tempFahrenheit = tempFahrenheit;
     }
@@ -49,7 +49,7 @@ public class Fahrenheit {
 
     @Override
     public String toString() {
-        return "Fahrenheit{" + "temperatura = " + tempFahrenheit + " ºF " + '}';
+        return "Fahrenheit {" + "temperatura = " + tempFahrenheit + " ºF " + '}';
     }
 
 }

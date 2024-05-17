@@ -23,8 +23,8 @@ public class Kelvin {
 
     public void setTempKelvin(float tempKelvin) throws Exception {
         if (tempKelvin < 0) {
-            throw new Exception(">>> Exceção em Kelvin: temperatura deve ser maior "
-                    + "ou igual ao zero absoluto (0 K).");
+            throw new Exception(">>> Exception em Kelvin: temperatura deve ser maior "
+                    + "ou igual ao zero absoluto (0 K).\n\t>> Valor registrado: " + tempKelvin + " K.");
         }
         this.tempKelvin = tempKelvin;
     }
