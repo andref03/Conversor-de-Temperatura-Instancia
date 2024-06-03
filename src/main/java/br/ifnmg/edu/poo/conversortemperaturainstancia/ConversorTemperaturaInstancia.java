@@ -1,7 +1,7 @@
 package br.ifnmg.edu.poo.conversortemperaturainstancia;
 
 /**
- *
+ * Classe principal do programa, que contém o método main.
  * @author André (@andref03)
  */
 public class ConversorTemperaturaInstancia {
