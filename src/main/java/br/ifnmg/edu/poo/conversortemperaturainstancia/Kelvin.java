@@ -1,7 +1,7 @@
 package br.ifnmg.edu.poo.conversortemperaturainstancia;
 
 /**
- *
+ * Classe que contém métodos específicos a partir da temperatura Kelvin.
  * @author André (@andref03)
  */
 public class Kelvin {
